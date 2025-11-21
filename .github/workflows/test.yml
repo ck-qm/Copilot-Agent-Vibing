@@ -33,7 +33,9 @@ jobs:
         run: npm ci
 
       - name: Run tests with coverage
-        run: npm test -- --watch=false --coverage 2>&1 | tee test-output.txt
+        run: |
+          set -o pipefail
+          npm test -- --watch=false --coverage 2>&1 | tee test-output.txt
 
       - name: Extract coverage summary
         if: always()
