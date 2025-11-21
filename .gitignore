@@ -37,6 +37,8 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
+test-output.txt
+coverage-summary.txt
 
 # System files
 .DS_Store
